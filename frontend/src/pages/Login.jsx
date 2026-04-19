@@ -19,8 +19,22 @@ import { Button } from "@/components/ui/button"
 import { useState } from "react"
 
 const Login = () => {
+
+  const [signupInput, setSignupInput] = useState({ name: "", email: "", password: "" })
+  const [loginInput, setLoginInput] = useState({ email: "", password: "" })
+
+  const changeInputHandler = (e, type) => {
+    const { name, value } = e.target
+    if (type === "signup") {
+      setSignupInput({ ...signupInput, [name]: value })
+    } else {
+      setLoginInput({ ...loginInput, [name]: value })
+    }
+  }
+
+
   return (
-   <div className="flex justify-center w-full items-center">
+    <div className="flex justify-center w-full items-center">
       <Tabs defaultValue="signup" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="signup">Signup</TabsTrigger>
@@ -41,9 +55,10 @@ const Login = () => {
                   name="name"
                   // value={signupInput.name}
                   onChange={(e) => changeInputHandler(e, "signup")}
+                  
                   type="text"
                   placeholder="Enter your name"
-                  required = "true" />
+                  required="true" />
               </div>
               <div className="space-y-1">
                 <Label>Email</Label>
@@ -53,7 +68,7 @@ const Login = () => {
                   onChange={(e) => changeInputHandler(e, "signup")}
                   type="email"
                   placeholder="Enter your email"
-                  required = "true"/>
+                  required="true" />
               </div>
               <div className="space-y-1">
                 <Label>Password</Label>
@@ -62,7 +77,7 @@ const Login = () => {
                   onChange={(e) => changeInputHandler(e, "signup")}
                   type="password"
                   placeholder="Enter your password"
-                  required = "true" />
+                  required="true" />
               </div>
             </CardContent>
             <CardFooter>
@@ -87,7 +102,7 @@ const Login = () => {
                   onChange={(e) => changeInputHandler(e, "login")}
                   type="email"
                   placeholder="Enter your email"
-                  required = "true" />
+                  required="true" />
               </div>
               <div className="space-y-1">
                 <Label>Password</Label>
@@ -96,7 +111,7 @@ const Login = () => {
                   onChange={(e) => changeInputHandler(e, "login")}
                   type="password"
                   placeholder="Enter your password"
-                  required = "true" />
+                  required="true" />
               </div>
             </CardContent>
             <CardFooter>
