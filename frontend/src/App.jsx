@@ -7,8 +7,7 @@ function App() {
 
   return (
     <div>
-      <h1>Project is under progress</h1>
-      <h1 className='text-black'>Hello</h1>
+ 
       <Login/>
       
 
