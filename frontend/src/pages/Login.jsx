@@ -53,9 +53,9 @@ const Login = () => {
                 <Label>Name</Label>
                 <Input
                   name="name"
-                  // value={signupInput.name}
+                  value={signupInput.name}
                   onChange={(e) => changeInputHandler(e, "signup")}
-                  
+
                   type="text"
                   placeholder="Enter your name"
                   required="true" />
@@ -64,7 +64,7 @@ const Login = () => {
                 <Label>Email</Label>
                 <Input
                   name="email"
-                  // value={signupInput.email}
+                  value={signupInput.email}
                   onChange={(e) => changeInputHandler(e, "signup")}
                   type="email"
                   placeholder="Enter your email"
@@ -73,7 +73,7 @@ const Login = () => {
               <div className="space-y-1">
                 <Label>Password</Label>
                 <Input name="password"
-                  // value={signupInput.password}
+                  value={signupInput.password}
                   onChange={(e) => changeInputHandler(e, "signup")}
                   type="password"
                   placeholder="Enter your password"
@@ -98,7 +98,7 @@ const Login = () => {
                 <Label>Email</Label>
                 <Input
                   name="email"
-                  // value={loginInput.email}
+                  value={loginInput.email}
                   onChange={(e) => changeInputHandler(e, "login")}
                   type="email"
                   placeholder="Enter your email"
@@ -107,7 +107,7 @@ const Login = () => {
               <div className="space-y-1">
                 <Label>Password</Label>
                 <Input name="password"
-                  // value={loginInput.password}
+                  value={loginInput.password}
                   onChange={(e) => changeInputHandler(e, "login")}
                   type="password"
                   placeholder="Enter your password"
