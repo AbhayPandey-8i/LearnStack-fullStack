@@ -1,3 +1,4 @@
+// pandeyabhay -- mongo password
 import React from 'react'
 import {
   Card,
@@ -31,6 +32,12 @@ const Login = () => {
       setLoginInput({ ...loginInput, [name]: value })
     }
   }
+
+  const handleRegistration = (type) => {
+    const inputData = type === "signup" ? signupInput : loginInput
+    console.log(inputData)
+  }
+  
 
 
   return (
