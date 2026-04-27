@@ -1,5 +1,6 @@
 import { User } from "../models/user.model"
 import bcrypt from "bcryptjs"
+import { generateToken } from "../utils/generateToken"
 
 
 //register
@@ -68,6 +69,8 @@ export const login = async (req, res) => {
                 message:"Incorrect email or password"
             })
         }
+
+        generateToken = (res, user, `Welcome back ${user.name}`);
 
     } catch (error) {
         console.log(error);
